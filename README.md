@@ -44,33 +44,16 @@
 
      
 
-  3. 
-
   4. 
 
-     
-
   
 
   
-
-
-
-
-
-
-
 
 
 
 
 ## 二、用户文件
-
-
-
-
-
-
 
 
 
@@ -138,9 +121,16 @@
 > """
 > ```
 >
-> 
 
-
+> [!NOTE]
+>
+> PyMARL采用命令行配置参数传参运行，例如：
+>
+> ```
+> pyhon --config=qmix --env-config=sc2 with env_args.map_name=MarineMicro_MvsM_4_dist t_max=1024000
+> ```
+>
+> 如使用PyCharm，可配置并保存运行配置中的脚本形参
 
 
 
