@@ -505,6 +505,16 @@ class StarCraft2Env(MultiAgentEnv):
         info["dead_allies"] = dead_allies
         info["dead_enemies"] = dead_enemies
 
+        # bai - sum of health of all agents and enemies
+        sum_health_agents, sum_health_enemies = 0, 0
+        for _al_id, al_unit in self.agents.items():
+            sum_health_agents += al_unit.health
+        for _e_id, e_unit in self.enemies.items():
+            sum_health_enemies += e_unit.health
+
+        info["sum_health_agents"] = sum_health_agents
+        info["sum_health_enemies"] = sum_health_enemies
+
         if game_end_code is not None:
             # Battle is over
             terminated = True
@@ -1544,7 +1554,6 @@ class StarCraft2Env(MultiAgentEnv):
                         self.max_reward += unit.health_max + unit.shield_max
 
             if self._episode_count == 0:
-                # Bai 20241010
                 min_unit_type = min(
                     unit.unit_type for unit in self.agents.values()
                 )
