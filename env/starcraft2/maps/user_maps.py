@@ -59,6 +59,15 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "marines",
     },
+    "MarineMicro_MvsM_8_mirror": {
+        "n_agents": 8,
+        "n_enemies": 8,
+        "limit": 100,
+        "a_race": "T",
+        "b_race": "T",
+        "unit_type_bits": 0,
+        "map_type": "marines",
+    },
 }
 
 

@@ -505,7 +505,7 @@ class StarCraft2Env(MultiAgentEnv):
         info["dead_allies"] = dead_allies
         info["dead_enemies"] = dead_enemies
 
-        # bai - sum of health of all agents and enemies
+        # binich - sum of health of all agents and enemies
         sum_health_agents, sum_health_enemies = 0, 0
         for _al_id, al_unit in self.agents.items():
             sum_health_agents += al_unit.health
